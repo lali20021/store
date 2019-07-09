@@ -1,0 +1,15 @@
+<h1>Hello New Customer</h1>
+<% if @customer.errors %>
+    <%= @customer.errors.full_messages %>
+<% end %>
+<form action="create" method="POST">
+  <label for="f_name">Name:</label>
+  <input id="f_name" name="customer[f_name]">
+  <label for="l_name">Lastname:</label>
+  <input id="l_name" name="customer[l_name]">
+  <label for="email">Email:</label>
+  <input id="email" name="customer[email]">
+  <label for="phone">Phone:</label>
+  <input id="phone" name="customer[phone]">
+  <input type="submit" value="Submit">
+</form>
